@@ -736,6 +736,10 @@ video {
   height: 20rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-\[400px\] {
   height: 400px;
 }
@@ -748,20 +752,16 @@ video {
   height: 100%;
 }
 
-.h-60 {
-  height: 15rem;
-}
-
-.h-96 {
-  height: 24rem;
-}
-
 .w-12 {
   width: 3rem;
 }
 
 .w-16 {
   width: 4rem;
+}
+
+.w-2\/4 {
+  width: 50%;
 }
 
 .w-20 {
@@ -776,20 +776,12 @@ video {
   width: 75%;
 }
 
-.w-40 {
-  width: 10rem;
-}
-
 .w-6 {
   width: 1.5rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-2\/4 {
-  width: 50%;
 }
 
 .max-w-32 {
@@ -1000,77 +992,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\'\'\] {
-  background-color: '';
-}
-
-.bg-\[\'url\'\] {
-  background-color: 'url';
-}
-
-.bg-\[url\] {
-  background-color: url;
-}
-
-.bg-yellow-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+.bg-\[url\(\'\/images\/hero-section\/bg-hero-section\.jpg\'\)\] {
+  background-image: url('/images/hero-section/bg-hero-section.jpg');
 }
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\)\] {
-  background-image: url();
-}
-
-.bg-\[url\(\'\'\)\] {
-  background-image: url('');
-}
-
-.bg-\[url\(\'\/\'\)\] {
-  background-image: url('/');
-}
-
-.bg-\[url\(\'\/images\'\)\] {
-  background-image: url('/images');
-}
-
-.bg-\[url\(\'\/images\/hero-section\'\)\] {
-  background-image: url('/images/hero-section');
-}
-
-.bg-\[url\(\'\/images\/hero-section\/\'\)\] {
-  background-image: url('/images/hero-section/');
-}
-
-.bg-\[url\(\'\/images\/hero-section\/bg\'\)\] {
-  background-image: url('/images/hero-section/bg');
-}
-
-.bg-\[url\(\'\/images\/hero-section\/bg-\'\)\] {
-  background-image: url('/images/hero-section/bg-');
-}
-
-.bg-\[url\(\'\/images\/hero-section\/bg-hero\'\)\] {
-  background-image: url('/images/hero-section/bg-hero');
-}
-
-.bg-\[url\(\'\/images\/hero-section\/bg-hero-\'\)\] {
-  background-image: url('/images/hero-section/bg-hero-');
-}
-
-.bg-\[url\(\'\/images\/hero-section\/bg-hero-section\'\)\] {
-  background-image: url('/images/hero-section/bg-hero-section');
-}
-
-.bg-\[url\(\'\/images\/hero-section\/bg-hero-section\.jpg\'\)\] {
-  background-image: url('/images/hero-section/bg-hero-section.jpg');
 }
 
 .from-black\/50 {
@@ -1135,6 +1062,11 @@ video {
   padding-right: 2rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1155,21 +1087,12 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .pl-6 {
   padding-left: 1.5rem;
 }
 
 .pr-6 {
   padding-right: 1.5rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
 }
 
 .text-center {
@@ -1440,6 +1363,10 @@ video {
     display: none;
   }
 
+  .sm\:h-96 {
+    height: 24rem;
+  }
+
   .sm\:w-2\/4 {
     width: 50%;
   }
@@ -1490,11 +1417,6 @@ video {
 
   .sm\:text-end {
     text-align: end;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .sm\:text-4xl {
