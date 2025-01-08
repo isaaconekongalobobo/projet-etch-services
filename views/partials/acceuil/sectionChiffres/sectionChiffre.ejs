@@ -1,0 +1,91 @@
+<section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <!-- Clients Satisfaits -->
+        <div class="flex flex-col items-center text-center">
+        <div class="bg-blue-700 rounded-full p-6 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+        </div>
+        <div class="stat-value text-5xl font-bold text-blue-700 mb-2" data-count="500">
+            500
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800">Clients satisfait</h3>
+        </div>
+
+        <!-- Projets Réussis -->
+        <div class="flex flex-col items-center text-center">
+        <div class="bg-blue-700 rounded-full p-6 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+        </div>
+        <div class="stat-value text-5xl font-bold text-blue-700 mb-2" data-count="25">
+            25
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800">Projet réussit</h3>
+        </div>
+
+        <!-- Travailleurs Expérimentés -->
+        <div class="flex flex-col items-center text-center">
+        <div class="bg-blue-700 rounded-full p-6 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 7h-3a2 2 0 0 1-2-2V2"></path>
+            <path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"></path>
+            <path d="M3 15h6"></path>
+            <path d="M3 18h6"></path>
+            </svg>
+        </div>
+        <div class="stat-value text-5xl font-bold text-blue-700 mb-2" data-count="50">
+            50
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800">Travailleurs Expérimenté</h3>
+        </div>
+    </div>
+    </div>
+</section>
+
+<script>
+    // Animation des compteurs
+    function animateValue(element, start, end, duration) {
+    let current = start;
+    const range = end - start;
+    const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / range));
+    
+    const timer = setInterval(() => {
+        current += increment;
+        element.textContent = current;
+        if (current === end) {
+        clearInterval(timer);
+        }
+    }, stepTime);
+    }
+
+    // Fonction pour démarrer l'animation lorsque l'élément est visible
+    function startCounterAnimation(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        const element = entry.target;
+        const finalValue = parseInt(element.dataset.count);
+        animateValue(element, 0, finalValue, 2000);
+        observer.unobserve(element);
+        }
+    });
+    }
+
+    // Observer pour détecter quand les éléments sont visibles
+    const observer = new IntersectionObserver(startCounterAnimation, {
+    threshold: 0.5
+    });
+
+    // Observer tous les compteurs
+    document.querySelectorAll('.stat-value').forEach(counter => {
+    observer.observe(counter);
+    });
+</script>

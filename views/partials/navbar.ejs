@@ -1,0 +1,26 @@
+<nav class="bg-[#3A4874] p-5 pr-6 pl-6 flex items-center justify-between fixed w-full z-10 " >
+    <img src="/images/logo-e-tech.png" alt="Logo E-tech service" class="w-20 sm:w-32 max-w-32">
+    <div class="flex items-center gap-5">
+        <div class="text-white hidden sm:flex gap-5 ">
+            <a href="#about">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="/commandes" class="bg-white p-2 rounded-full px-4 text-center hidden sm:flex gap-1 justify-center items-center ">
+            <span>Commander un service</span>
+            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                <path fill="#C69C29" d="M11 11H9v1h2v2h1v-2h2v-1h-2V9h-1zM7.758 9a4.5 4.5 0 1 1-.502 4H6v-1h1.027a4.55 4.55 0 0 1 .23-2H6V9zM2 4V3h2v1zm4 0V3h8v1zm0 3V6h8v1zM2 7V6h2v1zm0 3V9h2v1zm0 3v-1h2v1z"/>
+            </svg>
+        </a>        
+    </div>
+
+    <!-- Menu déroulant -->
+    <details class="sm:hidden" >
+        <summary class="text-white" >Menu</summary>
+        <ul class="absolute z-20 bg-white shadow-lg p-8 right-10 flex flex-col gap-3 " >
+            <li><a href="#about" class="hover:text-main-yellow">À propos</a></li>
+            <li><a href="#services" class="hover:text-main-yellow">Services</a></li>
+            <li><a href="#contact" class="hover:text-main-yellow">Contact</a></li>
+        </ul>
+    </details>
+</nav>

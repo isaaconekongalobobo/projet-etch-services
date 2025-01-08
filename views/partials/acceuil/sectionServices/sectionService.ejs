@@ -1,0 +1,11 @@
+<section id="services">
+    <div class="mb-4 flex flex-col gap-5">
+        <h2 class="text-3xl text-center font-bold text-[#B8860B]">Nos services</h2>
+        <h3 class="text-xl text-gray-900 text-center p-3 " >En RDC, Nous sommes les pionniers dans les services ci-après</h3>        
+    </div>
+    <div class="flex flex-col sm:flex-row items-center gap-10">
+        <% services.forEach((services) => { %>
+            <%- include ('./itemService', {services})  %>
+        <% }); %>
+    </div>
+</section>
